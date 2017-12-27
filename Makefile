@@ -2,8 +2,8 @@
 NAME=KoreanIM
 TYPE=SHARED
 SRCS= \
-	KoreanInputServerMethod.cpp \
-	KoreanInputServerLooper.cpp
+	src/KoreanInputServerMethod.cpp \
+	src/KoreanInputServerLooper.cpp
 RSRCS= 
 LIBS= intl hangul _APP_ be
 LIBPATHS=
