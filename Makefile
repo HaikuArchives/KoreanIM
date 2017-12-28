@@ -2,8 +2,8 @@
 NAME=KoreanIM
 TYPE=SHARED
 SRCS= \
-	KoreanInputServerMethod.cpp \
-	KoreanInputServerLooper.cpp
+	src/KoreanInputServerMethod.cpp \
+	src/KoreanInputServerLooper.cpp
 RSRCS= 
 LIBS= intl hangul _APP_ be
 LIBPATHS=
@@ -19,7 +19,8 @@ LINKER_FLAGS=
 
 all: _APP_ default
 
-include /boot/develop/etc/makefile-engine
+DEVEL_DIRECTORY := $(shell findpaths -r "makefile_engine" B_FIND_PATH_DEVELOP_DIRECTORY)
+include $(DEVEL_DIRECTORY)/etc/makefile-engine
 
 clean ::
 	rm -f _APP_
